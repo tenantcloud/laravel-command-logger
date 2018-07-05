@@ -1,7 +1,7 @@
 {
     "name": "tenantcloud/command-logger",
-    "description": ":description",
-    "license": "license",
+    "description": "Laravel package for saving command log information",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ivan Kolodiy",
