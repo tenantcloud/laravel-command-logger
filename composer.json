@@ -1,0 +1,31 @@
+{
+    "name": "tenantcloud/command-logger",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Ivan Kolodiy",
+            "email": "kolodiy.ivan.i@gmail.com",
+            "homepage": "https://ikolodiy.com"
+        }
+    ],
+    "homepage": "https://github.com/tenantcloud/commandlogger",
+    "keywords": ["Laravel", "CommandLogger"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TenantCloud\\CommandLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TenantCloud\\CommandLogger\\Tests\\": "tests"
+        }
+    }
+}
