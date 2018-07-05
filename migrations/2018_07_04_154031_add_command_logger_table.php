@@ -18,6 +18,7 @@ class AddCommandLoggerTable extends Migration
 			$table->string('signature', 128);
 			$table->float('execution_time');
 			$table->integer('memory_peak');
+			$table->string('host', 128);
 
 			$table->timestamps();
 			$table->softDeletes();

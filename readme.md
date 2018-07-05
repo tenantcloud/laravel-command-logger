@@ -12,7 +12,7 @@ This is where your description should go. Take a look at [contributing.md](contr
 Via Composer
 
 ``` bash
-$ composer require tenantcloud/commandlogger
+$ composer require tenantcloud/command-logger
 ```
 
 ## Usage
@@ -20,12 +20,6 @@ $ composer require tenantcloud/commandlogger
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Contributing
 
@@ -44,14 +38,11 @@ If you discover any security related issues, please email kolodiy.ivan.i@gmail.c
 
 license. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/tenantcloud/commandlogger.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/tenantcloud/commandlogger.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/tenantcloud/commandlogger/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
+[ico-version]: https://img.shields.io/packagist/v/tenantcloud/command-logger.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/tenantcloud/command-logger.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/tenantcloud/commandlogger
-[link-downloads]: https://packagist.org/packages/tenantcloud/commandlogger
-[link-travis]: https://travis-ci.org/tenantcloud/commandlogger
-[link-styleci]: https://styleci.io/repos/12345678
+[link-packagist]: https://packagist.org/packages/tenantcloud/command-logger
+[link-downloads]: https://packagist.org/packages/tenantcloud/command-logger
 [link-author]: https://github.com/tenantcloud
 [link-contributors]: ../../contributors]

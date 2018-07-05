@@ -14,5 +14,8 @@ return [
 		\TenantCloud\CommandLogger\Channels\FileChannel::class
 	],
 
-	'db_table' => 'command_log'
+	/**
+	 * Database table name.
+	 */
+	'db_table' => 'commands_log'
 ];

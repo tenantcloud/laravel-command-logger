@@ -1,7 +1,7 @@
 {
     "name": "tenantcloud/command-logger",
-    "description": "Laravel packages which helps saving commands execution log",
-    "license": "MIT",
+    "description": ":description",
+    "license": "license",
     "authors": [
         {
             "name": "Ivan Kolodiy",
@@ -9,7 +9,7 @@
             "homepage": "https://ikolodiy.com"
         }
     ],
-    "homepage": "https://github.com/tenantcloud/command-logger",
+    "homepage": "https://github.com/tenantcloud/commandlogger",
     "keywords": ["Laravel", "CommandLogger"],
     "require": {
         "illuminate/support": "~5"
