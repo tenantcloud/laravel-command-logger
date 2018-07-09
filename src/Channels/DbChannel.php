@@ -31,6 +31,11 @@ class DbChannel implements ChannelContract
 			'created_at' => now()
 		];
 
-		DB::table(config('commandlogger.db_table'))->insert($data);
+		$table = config('commandlogger.db_table');
+
+		// check if table was created. For the first php artisan migrate command.
+		if (\Schema::hasTable($table)) {
+			DB::table($table)->insert($data);
+		}
 	}
 }
