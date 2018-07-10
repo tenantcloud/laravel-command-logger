@@ -19,14 +19,19 @@ class Logger
 	public function init()
 	{
 		Event::listen(CommandFinished::class, function ($event) {
-			$timeFinished = microtime(true);
+			$signature = $event->command;
 
-			$executionTime = round($timeFinished - LARAVEL_START, 2);
+			// filter commands according to config
+			if (!in_array($signature, config('commandlogger.exclude'))) {
+				$timeFinished = microtime(true);
 
-			$memoryPeak = memory_get_peak_usage(true) / 1048576;
+				$executionTime = round($timeFinished - LARAVEL_START, 2);
 
-			foreach (config('commandlogger.channels') as $channelClass) {
-				app($channelClass)->handleLog($event->command, $executionTime, (int)$memoryPeak, gethostname());
+				$memoryPeak = memory_get_peak_usage(true) / 1048576;
+
+				foreach (config('commandlogger.channels') as $channelClass) {
+					app($channelClass)->handleLog($signature, $executionTime, (int)$memoryPeak, gethostname());
+				}
 			}
 		});
 	}

@@ -17,5 +17,10 @@ return [
 	/**
 	 * Database table name.
 	 */
-	'db_table' => 'commands_log'
+	'db_table' => 'commands_log',
+
+	/**
+	 * Array of commands that should be excluded for logging
+	 */
+	'exclude' => []
 ];
