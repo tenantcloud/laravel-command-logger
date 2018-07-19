@@ -22,7 +22,7 @@ class Logger
 			$signature = $event->command;
 
 			// filter commands according to config
-			if (!in_array($signature, config('commandlogger.exclude'))) {
+			if ($signature && !in_array($signature, config('commandlogger.exclude'))) {
 				$timeFinished = microtime(true);
 
 				$executionTime = round($timeFinished - LARAVEL_START, 2);
