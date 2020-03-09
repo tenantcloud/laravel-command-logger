@@ -25,7 +25,9 @@ class Logger
 			if ($signature && !in_array($signature, config('commandlogger.exclude'))) {
 				$timeFinished = microtime(true);
 
-				$executionTime = round($timeFinished - LARAVEL_START, 2);
+				$executionTime = defined('LARAVEL_START') ?
+                    round($timeFinished - LARAVEL_START, 2) :
+                    0;
 
 				$memoryPeak = memory_get_peak_usage(true) / 1048576;
 
