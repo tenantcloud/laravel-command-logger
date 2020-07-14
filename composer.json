@@ -12,11 +12,11 @@
     "homepage": "https://github.com/tenantcloud/commandlogger",
     "keywords": ["Laravel", "CommandLogger"],
     "require": {
-        "illuminate/support": "~5"
+        "illuminate/support": "^7.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~6.0",
-        "orchestra/testbench": "~3.0"
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": "^5.0"
     },
     "autoload": {
         "psr-4": {
