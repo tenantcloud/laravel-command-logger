@@ -25,7 +25,7 @@ class CommandLoggerServiceProvider extends ServiceProvider
 				__DIR__ . '/../config/commandlogger.php' => config_path('commandlogger.php'),
 			], 'commandlogger.config');
 
-			$this->loadMigrationsFrom(__DIR__.'/../migrations');
+			$this->registerMigrations();
 		}
 
 		app(Logger::class)->init();
@@ -49,5 +49,15 @@ class CommandLoggerServiceProvider extends ServiceProvider
 	public function provides()
 	{
 		return ['commandlogger'];
+	}
+
+	/**
+	 * Register CommandLogger migration file.
+	 */
+	protected function registerMigrations()
+	{
+		if (config('commandlogger.runs_migrations')) {
+			$this->loadMigrationsFrom(__DIR__.'/../migrations');
+		}
 	}
 }
