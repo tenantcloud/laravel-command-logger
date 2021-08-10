@@ -19,6 +19,11 @@ return [
 	 */
 	'db_table' => 'commands_log',
 
+	/*
+	 * Indicates if CommandLogger migrations will be run.
+	 */
+	'runs_migrations' => true,
+
 	/**
 	 * Array of commands that should be excluded for logging
 	 */
