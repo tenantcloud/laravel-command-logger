@@ -4,25 +4,18 @@ namespace TenantCloud\CommandLogger;
 
 use Illuminate\Support\ServiceProvider;
 
-/**
- * Class CommandLoggerServiceProvider
- * @package TenantCloud\CommandLogger
- */
 class CommandLoggerServiceProvider extends ServiceProvider
 {
 	/**
 	 * Perform post-registration booting of services.
-	 *
-	 * @return void
 	 */
 	public function boot()
 	{
 		// Publishing is only necessary when using the CLI.
 		if ($this->app->runningInConsole()) {
-
 			// Publishing the configuration file.
 			$this->publishes([
-				__DIR__ . '/../config/commandlogger.php' => config_path('commandlogger.php'),
+				__DIR__ . '/../resources/config/commandlogger.php' => config_path('commandlogger.php'),
 			], 'commandlogger.config');
 
 			$this->registerMigrations();
@@ -33,12 +26,10 @@ class CommandLoggerServiceProvider extends ServiceProvider
 
 	/**
 	 * Register any package services.
-	 *
-	 * @return void
 	 */
 	public function register()
 	{
-		$this->mergeConfigFrom(__DIR__ . '/../config/commandlogger.php', 'commandlogger');
+		$this->mergeConfigFrom(__DIR__ . '/../resources/config/commandlogger.php', 'commandlogger');
 	}
 
 	/**
@@ -57,7 +48,7 @@ class CommandLoggerServiceProvider extends ServiceProvider
 	protected function registerMigrations()
 	{
 		if (config('commandlogger.runs_migrations')) {
-			$this->loadMigrationsFrom(__DIR__.'/../migrations');
+			$this->loadMigrationsFrom(__DIR__ . '/../resources/migrations');
 		}
 	}
 }
