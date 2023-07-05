@@ -1,7 +1,7 @@
 <?php
 
 return [
-	/**
+	/*
 	 * Channels which will be used to save log about command
 	 *
 	 * Available options:
@@ -11,10 +11,10 @@ return [
 	 */
 	'channels' => [
 		\TenantCloud\CommandLogger\Channels\DbChannel::class,
-		\TenantCloud\CommandLogger\Channels\FileChannel::class
+		\TenantCloud\CommandLogger\Channels\FileChannel::class,
 	],
 
-	/**
+	/*
 	 * Database table name.
 	 */
 	'db_table' => 'commands_log',
@@ -24,8 +24,8 @@ return [
 	 */
 	'runs_migrations' => true,
 
-	/**
+	/*
 	 * Array of commands that should be excluded for logging
 	 */
-	'exclude' => []
+	'exclude' => [],
 ];
