@@ -1,5 +1,8 @@
 <?php
 
+use TenantCloud\CommandLogger\Channels\DbChannel;
+use TenantCloud\CommandLogger\Channels\FileChannel;
+
 return [
 	/*
 	 * Channels which will be used to save log about command
@@ -10,8 +13,8 @@ return [
 	 * etc.
 	 */
 	'channels' => [
-		\TenantCloud\CommandLogger\Channels\DbChannel::class,
-		\TenantCloud\CommandLogger\Channels\FileChannel::class,
+		DbChannel::class,
+		FileChannel::class,
 	],
 
 	/*
